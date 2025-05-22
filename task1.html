@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modern Landing Page</title>
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      width: 100%;
+      background: transparent;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s, box-shadow 0.3s;
+      z-index: 1000;
+    }
+
+    header.scrolled {
+      background: #2c3e50;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #00aaff;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    header.scrolled nav ul li a {
+      color: white;
+    }
+
+    nav ul li a:hover {
+      color: #00ffaa;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background: #ffffff;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 36px;
+      color: #333;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #666;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header/Navbar -->
+  <header id="header">
+    <div class="logo">MySite</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to MySite</h1>
+    <p>Your success starts here</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are passionate about building modern and responsive websites that drive results.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>From web development to digital marketing, we provide a complete solution for your business.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind? Get in touch with us to make it happen!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MySite. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for scroll effect -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
